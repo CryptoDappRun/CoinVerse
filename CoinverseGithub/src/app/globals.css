@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 273 70% 61%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 273 100% 75%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 273 70% 61%;
+    --radius: 0.5rem;
+    --chart-1: 273 70% 61%;
+    --chart-2: 140 70% 55%;
+    --chart-3: 273 50% 50%;
+    --chart-4: 240 50% 70%;
+    --chart-5: 240 33% 50%;
+  }
+  .dark {
+    --background: 240 33% 14%;
+    --foreground: 0 0% 98%;
+    --card: 240 33% 18%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 33% 18%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 273 70% 61%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 33% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 33% 20%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 273 100% 75%;
+    --accent-foreground: 240 33% 14%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 33% 25%;
+    --input: 240 33% 25%;
+    --ring: 273 70% 61%;
+    --chart-1: 273 70% 61%;
+    --chart-2: 140 70% 55%;
+    --chart-3: 273 50% 50%;
+    --chart-4: 240 50% 70%;
+    --chart-5: 240 33% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .price-up {
+    animation: price-up-animation 0.5s ease-out;
+  }
+  .price-down {
+    animation: price-down-animation 0.5s ease-out;
+  }
+
+  @keyframes price-up-animation {
+    0% { background-color: hsla(var(--chart-2), 0.2); }
+    100% { background-color: transparent; }
+  }
+
+  @keyframes price-down-animation {
+    0% { background-color: hsla(var(--destructive), 0.2); }
+    100% { background-color: transparent; }
+  }
+}

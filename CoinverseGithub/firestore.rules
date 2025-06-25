@@ -1,0 +1,20 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Default to denying all access
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Allow public read access to chat messages
+    match /chats/{cryptoId}/messages/{messageId} {
+      allow read: if true;
+      
+      // Allow authenticated users to create messages
+      // and ensure they can only post as themselves.
+      allow create: if request.auth != null 
+                    && request.resource.data.userId == request.auth.uid;
+    }
+  }
+}
