@@ -4,8 +4,11 @@ https://coin-ck1.pages.dev/
 <img src="screen.png">
 
 
-firebase config:
+### firebase config:
 CoinverseGithub/src/lib/firebase.ts
+
+### firebase rules:
+CoinverseGithub/firestore.rules
 
 
 ## Core Features:
