@@ -1,5 +1,5 @@
 #  Coinverse
-https://coin-ck1.pages.dev/crypto/bitcoin
+https://coin-ck1.pages.dev/
 
 <img src="screen.png">
 ## Core Features:
