@@ -2,6 +2,12 @@
 https://coin-ck1.pages.dev/
 
 <img src="screen.png">
+
+
+firebase config:
+CoinverseGithub/src/lib/firebase.ts
+
+
 ## Core Features:
 
 - Top 100 Crypto List: Display a list of the top 100 cryptocurrencies by market capitalization.
